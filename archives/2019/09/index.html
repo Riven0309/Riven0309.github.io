@@ -734,41 +734,6 @@ function show_date_time(){window.setTimeout("show_date_time()",1e3),BirthDay=new
 
 
 
-  
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  
-  <script src="/js/src/Valine.min.js"></script>  
-
-   
-  
-  <script src="/js/src/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick';
-    guest = guest.split(',').filter(function (item) {
-      return GUEST.indexOf(item) > -1;
-    });
-    new Valine({
-        el: '#comments',
-        verify: false,
-        notify: false,
-        appId: 'UBxrCVEcBs9Vu3dTn8rRU1vG-gzGzoHsz',
-        appKey: 'dsnY1mOGqCbO488Fkb6pFYSh',
-        placeholder: '对作者说点什么吧！',
-        avatar:'',
-        guest_info:['nick'] ,  //评论者只需要提供评论的昵称即可
-        pageSize:'10' || 10,
-    });
-    //增加以下六行代码去除 power by valine
-    var infoEle = document.querySelector('#comments .info');
-    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0){
-      infoEle.childNodes.forEach(function(item) {
-        item.parentNode.removeChild(item);
-      });
-    }
-  </script>
-
 
 
   
