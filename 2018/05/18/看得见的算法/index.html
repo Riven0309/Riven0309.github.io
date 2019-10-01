@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.ico?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="java,算法,java swing,可视化,图形学,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="看得见的算法跟着慕课网的老师学习，用Java Swing所做的几个小demo，《看得见的算法》课程地址链接：[点击这里]">
+<meta name="keywords" content="java,算法,java swing,可视化,图形学">
+<meta property="og:type" content="article">
+<meta property="og:title" content="看得见的算法">
+<meta property="og:url" content="http://yoursite.com/2018/05/18/看得见的算法/index.html">
+<meta property="og:site_name" content="学无止境">
+<meta property="og:description" content="看得见的算法跟着慕课网的老师学习，用Java Swing所做的几个小demo，《看得见的算法》课程地址链接：[点击这里]">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/看得见的算法/frame.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/看得见的算法/jpanel绘制一个圆.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/看得见的算法/jpanel绘制一个圆.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/看得见的算法/Graphics2D相关接口.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/看得见的算法/红色圆.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/看得见的算法/线段拐角类型.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/看得见的算法/线段端点类型.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/看得见的算法/抗锯齿原理.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/看得见的算法/抗锯齿前后对比.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/看得见的算法/单缓存1.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/看得见的算法/单缓存2.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/看得见的算法/双缓存1.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/看得见的算法/双缓存2.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/看得见的算法/错误.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/看得见的算法/碰撞的小球1.gif">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/看得见的算法/碰撞前.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/看得见的算法/碰撞后.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/看得见的算法/碰撞的小球2.gif">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/看得见的算法/生成位置的小BUG.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/看得见的算法/随机生成圆.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/看得见的算法/棋盘格.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/看得见的算法/键盘鼠标事件.gif">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/看得见的算法/相交的小球.png">
+<meta property="og:updated_time" content="2019-10-01T14:50:10.723Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="看得见的算法">
+<meta name="twitter:description" content="看得见的算法跟着慕课网的老师学习，用Java Swing所做的几个小demo，《看得见的算法》课程地址链接：[点击这里]">
+<meta name="twitter:image" content="http://yoursite.com/2018/05/18/看得见的算法/frame.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/05/18/看得见的算法/">
+
+
+
+
+
+  <title>看得见的算法 | 学无止境</title>
+  
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="/dist/css/share.min.css">
+  <script src="/dist/js/social-share.min.js"></script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/Riven0309" class="github-corner" aria-label="View source on GitHub">
+      <svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/>
+      </svg>
+    </a>
+    <style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">学无止境</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/18/看得见的算法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="韩锦峰">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/0309.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="学无止境">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">看得见的算法</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-18T22:33:44+08:00">
+                2018-05-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构与算法/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量 <i class="fa fa-file-o">
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </i></span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  5.4k 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  25 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="看得见的算法"><a href="#看得见的算法" class="headerlink" title="看得见的算法"></a>看得见的算法</h1><p>跟着慕课网的老师学习，用Java Swing所做的几个小demo，《看得见的算法》课程地址链接：[<a href="https://coding.imooc.com/class/138.html" target="_blank" rel="noopener">点击这里</a>]</p>
+<a id="more"></a>
+<h2 id="第一章、碰撞的小球"><a href="#第一章、碰撞的小球" class="headerlink" title="第一章、碰撞的小球"></a>第一章、碰撞的小球</h2><h2 id="1、-创建一个JFrame窗体"><a href="#1、-创建一个JFrame窗体" class="headerlink" title="1、 创建一个JFrame窗体"></a>1、 创建一个JFrame窗体</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CircleFrame</span> <span class="keyword">extends</span> <span class="title">JFrame</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> canvasWidth;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> canvasHeight;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CircleFrame</span><span class="params">(String title, <span class="keyword">int</span> canvasWidth, <span class="keyword">int</span> canvasHeight)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">super</span>(title);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">this</span>.canvasWidth = canvasWidth;</span><br><span class="line">        <span class="keyword">this</span>.canvasHeight = canvasHeight;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">this</span>.setSize(canvasWidth, canvasHeight);</span><br><span class="line">        <span class="keyword">this</span>.setResizable(<span class="keyword">false</span>);</span><br><span class="line">        <span class="keyword">this</span>.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span><br><span class="line">        <span class="keyword">this</span>.setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CircleFrame</span><span class="params">(String title)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>(title, <span class="number">1024</span>, <span class="number">768</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getCanvasWidth</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> canvasWidth; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getCanvasHeight</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> canvasHeight; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>启动类：将窗体的创建放进java.awt的事件队列中。(我自己也不是很明白，讲解的老师说官方推荐这样做)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        EventQueue.invokeLater(() -&gt; &#123;</span><br><span class="line">            <span class="keyword">new</span> CircleFrame(<span class="string">"碰撞的小球"</span>, <span class="number">500</span>, <span class="number">500</span>);</span><br><span class="line">            <span class="comment">//new CircleFrame("碰撞的小球");</span></span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行</p>
+<p><img src="frame.png" style="zoom:50%;"></p>
+<h2 id="2、为JFrame添加JPanel画布"><a href="#2、为JFrame添加JPanel画布" class="headerlink" title="2、为JFrame添加JPanel画布"></a>2、为JFrame添加JPanel画布</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CircleFrame</span> <span class="keyword">extends</span> <span class="title">JFrame</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CircleFrame</span><span class="params">(String title, <span class="keyword">int</span> canvasWidth, <span class="keyword">int</span> canvasHeight)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">        <span class="keyword">this</span>.canvasHeight = canvasHeight;</span><br><span class="line">        </span><br><span class="line">        CircleCanvas canvas = <span class="keyword">new</span> CircleCanvas();</span><br><span class="line">        <span class="keyword">this</span>.setContentPane(canvas);</span><br><span class="line">        <span class="keyword">this</span>.pack();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">this</span>.setResizable(<span class="keyword">false</span>);</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">CircleCanvas</span> <span class="keyword">extends</span> <span class="title">JPanel</span> </span>&#123;</span><br><span class="line">     </span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">paintComponent</span><span class="params">(Graphics g)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">super</span>.paintComponent(g);</span><br><span class="line">            g.drawOval(<span class="number">50</span>, <span class="number">50</span>, <span class="number">300</span>, <span class="number">300</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> Dimension <span class="title">getPreferredSize</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> Dimension(canvasWidth, canvasHeight);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>继续运行main方法</p>
+<p><img src="jpanel绘制一个圆.png" style="zoom:80%;"></p>
+<h2 id="3、使用Graphics2D进行绘图"><a href="#3、使用Graphics2D进行绘图" class="headerlink" title="3、使用Graphics2D进行绘图"></a>3、使用Graphics2D进行绘图</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CircleFrame</span> <span class="keyword">extends</span> <span class="title">JFrame</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">CircleCanvas</span> <span class="keyword">extends</span> <span class="title">JPanel</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">paintComponent</span><span class="params">(Graphics g)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">super</span>.paintComponent(g);</span><br><span class="line">            Graphics2D g2d = (Graphics2D) g;</span><br><span class="line">            Ellipse2D circle = <span class="keyword">new</span> Ellipse2D.Double(<span class="number">50</span>, <span class="number">50</span>, <span class="number">300</span>,<span class="number">300</span>);</span><br><span class="line">            g2d.draw(circle);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="jpanel绘制一个圆.png" style="zoom:80%;"></p>
+<p>Graphics2D相关接口：</p>
+<p><img src="Graphics2D相关接口.png" style="zoom:80%;"></p>
+<h2 id="4、整理绘制工具类CircleHelper-java"><a href="#4、整理绘制工具类CircleHelper-java" class="headerlink" title="4、整理绘制工具类CircleHelper.java"></a>4、整理绘制工具类CircleHelper.java</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CircleHelper</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">CircleHelper</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Red = <span class="keyword">new</span> Color(<span class="number">0xF44336</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Pink = <span class="keyword">new</span> Color(<span class="number">0xE91E63</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Purple = <span class="keyword">new</span> Color(<span class="number">0x9C27B0</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color DeepPurple = <span class="keyword">new</span> Color(<span class="number">0x673AB7</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Indigo = <span class="keyword">new</span> Color(<span class="number">0x3F51B5</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Blue = <span class="keyword">new</span> Color(<span class="number">0x2196F3</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color LightBlue = <span class="keyword">new</span> Color(<span class="number">0x03A9F4</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Cyan = <span class="keyword">new</span> Color(<span class="number">0x00BCD4</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Teal = <span class="keyword">new</span> Color(<span class="number">0x009688</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Green = <span class="keyword">new</span> Color(<span class="number">0x4CAF50</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color LightGreen = <span class="keyword">new</span> Color(<span class="number">0x8BC34A</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Lime = <span class="keyword">new</span> Color(<span class="number">0xCDDC39</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Yellow = <span class="keyword">new</span> Color(<span class="number">0xFFEB3B</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Amber = <span class="keyword">new</span> Color(<span class="number">0xFFC107</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Orange = <span class="keyword">new</span> Color(<span class="number">0xFF9800</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color DeepOrange = <span class="keyword">new</span> Color(<span class="number">0xFF5722</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Brown = <span class="keyword">new</span> Color(<span class="number">0x795548</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Grey = <span class="keyword">new</span> Color(<span class="number">0x9E9E9E</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color BlueGrey = <span class="keyword">new</span> Color(<span class="number">0x607D8B</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Black = <span class="keyword">new</span> Color(<span class="number">0x000000</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color White = <span class="keyword">new</span> Color(<span class="number">0xFFFFFF</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 设置线条的宽度及&lt;b&gt;其他参数&lt;/b&gt;</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">setStrokeWidth</span><span class="params">(Graphics2D g2d, <span class="keyword">int</span> width)</span> </span>&#123;</span><br><span class="line">        g2d.setStroke(<span class="keyword">new</span> BasicStroke(width, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 设置画笔颜色</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">setColor</span><span class="params">(Graphics2D g2d, Color color)</span> </span>&#123;</span><br><span class="line">        g2d.setColor(color);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 画一个空心圆</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> g2d</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> x 圆心横坐标</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> y 圆心纵坐标</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> r 半径</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">drawCircle</span><span class="params">(Graphics2D g2d, <span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">        Ellipse2D circle = <span class="keyword">new</span> Ellipse2D.Double(x-r, y-r, <span class="number">2</span>*r, <span class="number">2</span>*r);</span><br><span class="line">        g2d.draw(circle);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 画一个实心圆</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> r 半径</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">fillCircle</span><span class="params">(Graphics2D g2d, <span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">        Ellipse2D circle = <span class="keyword">new</span> Ellipse2D.Double(x-r, y-r, <span class="number">2</span>*r, <span class="number">2</span>*r);</span><br><span class="line">        g2d.fill(circle);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">pause</span><span class="params">(<span class="keyword">int</span> t)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Thread.sleep(<span class="number">20</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用工具类进行绘制：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CircleFrame</span> <span class="keyword">extends</span> <span class="title">JFrame</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">CircleCanvas</span> <span class="keyword">extends</span> <span class="title">JPanel</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">paintComponent</span><span class="params">(Graphics g)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">super</span>.paintComponent(g);</span><br><span class="line">            Graphics2D g2d = (Graphics2D) g;</span><br><span class="line">            CircleHelper.setStrokeWidth(g2d, <span class="number">1</span>);</span><br><span class="line">            CircleHelper.setColor(g2d, Color.RED);</span><br><span class="line">            CircleHelper.drawCircle(g2d, <span class="number">200</span>, <span class="number">200</span>, <span class="number">150</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="红色圆.png" style="zoom:80%;"></p>
+<p>BasicStroke相关参数：</p>
+<p><img src="线段拐角类型.png" style="zoom:80%;"></p>
+<p><img src="线段端点类型.png" style="zoom:80%;"></p>
+<h2 id="5、抗锯齿和双缓存"><a href="#5、抗锯齿和双缓存" class="headerlink" title="5、抗锯齿和双缓存"></a>5、抗锯齿和双缓存</h2><h3 id="抗锯齿"><a href="#抗锯齿" class="headerlink" title="抗锯齿"></a>抗锯齿</h3><p>抗锯齿原理：<img src="抗锯齿原理.png" style="zoom:80%;"></p>
+<p>java中打开抗锯齿：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> <span class="meta">@Override</span></span><br><span class="line"> <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">paintComponent</span><span class="params">(Graphics g)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">super</span>.paintComponent(g);</span><br><span class="line">      Graphics2D g2d = (Graphics2D) g;</span><br><span class="line">      <span class="comment">// 抗锯齿</span></span><br><span class="line">      RenderingHints hints = <span class="keyword">new</span> RenderingHints(</span><br><span class="line">      	   RenderingHints.KEY_ANTIALIASING,</span><br><span class="line">           RenderingHints.VALUE_ANTIALIAS_ON);</span><br><span class="line">      g2d.addRenderingHints(hints);</span><br><span class="line">      <span class="comment">// 具体绘制</span></span><br><span class="line">      <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>开启抗锯齿前后效果对比：</p>
+<p><img src="抗锯齿前后对比.png" style="zoom:80%;"></p>
+<p>更多java抗锯齿处理相关api请自行查阅<a href="https://docs.oracle.com/javase/8/docs/api/" target="_blank" rel="noopener">java官方文档</a></p>
+<h3 id="双缓存"><a href="#双缓存" class="headerlink" title="双缓存"></a>双缓存</h3><p>首先需要了解单缓存的原理和缺点</p>
+<h4 id="单缓存"><a href="#单缓存" class="headerlink" title="单缓存"></a>单缓存</h4><p>单缓存中，一块屏幕只对应一个画布，画布的内容会投影给屏幕。画布在每次绘制内容时，都会先清空画布原有的所有内容，再对内容进行重新绘制。因此在两次绘制间隔会有一段空白，就会造成屏幕的“闪烁”现象。</p>
+<p><img src="单缓存1.png" style="zoom:80%;"></p>
+<p><img src="单缓存2.png" style="zoom:80%;"></p>
+<h4 id="双缓存技术"><a href="#双缓存技术" class="headerlink" title="双缓存技术"></a>双缓存技术</h4><p>原理：一块屏幕对应了两个画布，当画布进行绘制，首先并不会清空内容，而是由另一块画布绘制下一次内容的状态。在绘制的过程中，第一块画布一直会投影给屏幕，等到第二块画布绘制完成后，第一块画布取消投影，由第二块画布将绘制好的内容投影给屏幕。然后第一块画布接着绘制下一状态的内容，同时第二块画布会一直投影给屏幕…这样交替绘制交替投影，从而消除单缓存的缺点。</p>
+<p><img src="双缓存1.png" style="zoom:80%;"></p>
+<p><img src="双缓存2.png" style="zoom:80%;"></p>
+<p>java中开启双缓存其实非常简单，为我们的画布类添加构造方法，再在构造方法中调用父类构造方法将参数设置为true就行。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">CircleCanvas</span> <span class="keyword">extends</span> <span class="title">JPanel</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CircleCanvas</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(<span class="keyword">true</span>); <span class="comment">// 双缓存，java8默认是打开的，甚至都不用我们创建这个构造函数</span></span><br><span class="line">    &#125;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>抗锯齿和双缓存技术主要是<strong>计算机图形学</strong>的范畴，想要深入学习的同学建议网上查阅相关资料，自行了解。</p>
+<h2 id="6、动画基础：绘制运动的小球"><a href="#6、动画基础：绘制运动的小球" class="headerlink" title="6、动画基础：绘制运动的小球"></a>6、动画基础：绘制运动的小球</h2><h3 id="6、1-首先需要建立小球数据"><a href="#6、1-首先需要建立小球数据" class="headerlink" title="6、1  首先需要建立小球数据"></a>6、1  首先需要建立小球数据</h3><p>创建Circle.java</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Circle</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> x, y; <span class="comment">// 小球圆心坐标</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> r; <span class="comment">// 半径</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> vx, vy; <span class="comment">// 水平与垂直方向的速度分量</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Circle</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> r, <span class="keyword">int</span> vx, <span class="keyword">int</span> vy)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.x = x;</span><br><span class="line">        <span class="keyword">this</span>.y = y;</span><br><span class="line">        <span class="keyword">this</span>.r = r;</span><br><span class="line">        <span class="keyword">this</span>.vx = vx;</span><br><span class="line">        <span class="keyword">this</span>.vy = vy;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getR</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> r;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 简单的小球运动逻辑（数据的更新）</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">move</span><span class="params">(<span class="keyword">int</span> minX, <span class="keyword">int</span> minY, <span class="keyword">int</span> maxX, <span class="keyword">int</span> maxY)</span> </span>&#123;</span><br><span class="line">        x += vx;</span><br><span class="line">        y += vy;</span><br><span class="line">        checkWallCollision(minX, minY, maxX, maxY);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 球与墙的碰撞检测</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">checkWallCollision</span><span class="params">(<span class="keyword">int</span> minX, <span class="keyword">int</span> minY, <span class="keyword">int</span> maxX, <span class="keyword">int</span> maxY)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (x - r &lt;  minX)  &#123; x = r;        vx = -vx;&#125;</span><br><span class="line">        <span class="keyword">if</span> (x + r &gt;= maxX)  &#123; x = maxX - r; vx = -vx;&#125;</span><br><span class="line">        <span class="keyword">if</span> (y - r &lt;  minY)  &#123; y = r;        vy = -vy;&#125;</span><br><span class="line">        <span class="keyword">if</span> (y + r &gt;= maxY)  &#123; y = maxY - r; vy = -vy;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="6、2-将Circle的数据传递给CircleFrame，使窗体能够对小球的数据进行绘制。"><a href="#6、2-将Circle的数据传递给CircleFrame，使窗体能够对小球的数据进行绘制。" class="headerlink" title="6、2 将Circle的数据传递给CircleFrame，使窗体能够对小球的数据进行绘制。"></a>6、2 将Circle的数据传递给CircleFrame，使窗体能够对小球的数据进行绘制。</h3><p>在CircleFrame.java中设置一个新的成员属性和方法，然后在画布类的paintComponent方法的<strong>具体绘制</strong>处实现对每一个小球的绘制逻辑</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CircleFrame</span> <span class="keyword">extends</span> <span class="title">JFrame</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">private</span> Circle[] circles; <span class="comment">// 我们要绘制多个小球，所以是Circle[]</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">render</span><span class="params">(Circle[] circles)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.circles = circles;</span><br><span class="line">        <span class="keyword">this</span>.repaint(); <span class="comment">// 调用repaint方法进行画布的刷新</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">CircleCanvas</span> <span class="keyword">extends</span> <span class="title">JPanel</span> </span>&#123;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">paintComponent</span><span class="params">(Graphics g)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">super</span>.paintComponent(g);</span><br><span class="line">            Graphics2D g2d = (Graphics2D) g;</span><br><span class="line">            <span class="comment">// 抗锯齿</span></span><br><span class="line">            <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// 具体绘制</span></span><br><span class="line">            CircleHelper.setStrokeWidth(g2d, <span class="number">1</span>);</span><br><span class="line">            CircleHelper.setColor(g2d, Color.RED);</span><br><span class="line">            <span class="keyword">for</span> (Circle circle : circles) &#123; <span class="comment">// 绘制每一个圆</span></span><br><span class="line">                CircleHelper.drawCircle(g2d, circle.x, circle.y, circle.getR());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="6、3-在启动类中进行Circle数据和窗体大小的初始化，在事件队列中进行对窗体的渲染和数据更新。"><a href="#6、3-在启动类中进行Circle数据和窗体大小的初始化，在事件队列中进行对窗体的渲染和数据更新。" class="headerlink" title="6、3 在启动类中进行Circle数据和窗体大小的初始化，在事件队列中进行对窗体的渲染和数据更新。"></a>6、3 在启动类中进行Circle数据和窗体大小的初始化，在事件队列中进行对窗体的渲染和数据更新。</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 数据的初始化</span></span><br><span class="line">    <span class="keyword">int</span> sceneWidth = <span class="number">1000</span>;</span><br><span class="line">    <span class="keyword">int</span> sceneHeight = <span class="number">1000</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> N = <span class="number">10</span>;</span><br><span class="line">    Circle[] circles = <span class="keyword">new</span> Circle[N];</span><br><span class="line">    <span class="keyword">int</span> R = <span class="number">50</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> x = (<span class="keyword">int</span>) ((Math.random() * (sceneWidth - <span class="number">2</span> * R)) + R);</span><br><span class="line">        <span class="keyword">int</span> y = (<span class="keyword">int</span>) ((Math.random() * (sceneHeight - <span class="number">2</span> * R)) + R);</span><br><span class="line">        <span class="keyword">int</span> vx = (<span class="keyword">int</span>) (Math.random() * <span class="number">11</span>) - <span class="number">5</span>;</span><br><span class="line">        <span class="keyword">int</span> vy = (<span class="keyword">int</span>) (Math.random() * <span class="number">11</span>) - <span class="number">5</span>;</span><br><span class="line">        circles[i] = <span class="keyword">new</span> Circle(x, y, R, vx, vy);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 事件派生队列</span></span><br><span class="line">    EventQueue.invokeLater(() -&gt; &#123;</span><br><span class="line">        CircleFrame frame = <span class="keyword">new</span> CircleFrame(<span class="string">"碰撞的小球"</span>, sceneWidth, sceneHeight);</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="comment">// 窗体渲染</span></span><br><span class="line">            frame.render(circles);</span><br><span class="line">            CircleHelper.pause(<span class="number">20</span>);</span><br><span class="line">            <span class="comment">// 更新数据</span></span><br><span class="line">            <span class="keyword">for</span> (Circle circle : circles) &#123;</span><br><span class="line">                circle.move(<span class="number">0</span>, <span class="number">0</span>, sceneWidth, sceneHeight);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="6、4-启动程序后发现的错误及解决方法"><a href="#6、4-启动程序后发现的错误及解决方法" class="headerlink" title="6、4 启动程序后发现的错误及解决方法"></a>6、4 启动程序后发现的错误及解决方法</h3><p>启动程序<img src="错误.png" style="zoom:80%;"></p>
+<p>发现程序并未能向我们预计的那样正确运行，首先是窗体并未绘制出小球，其次我们想点击窗体的关闭按钮来关闭窗体也做不到，程序被卡死。</p>
+<p><strong>产生错误的原因：</strong></p>
+<p>我们在一开始将窗体的创建放进了一个事件队列中，而在java程序中，这个事件队列处理的不光是窗体的创建这一个事件，还有许多其他的事件。而我们现在在这个事件队列中放入一个了while (true) {…}的死循环，这个死循环的事件相对于其他事件来说是一个无穷无尽的事件，也就会造成事件中的<em>阻塞</em>现象。也是此次程序卡死的原因。</p>
+<p><strong>解决方案：</strong></p>
+<p>将这个死循环抽取出来放进一个线程中。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">EventQueue.invokeLater(() -&gt; &#123;</span><br><span class="line">    CircleFrame frame = <span class="keyword">new</span> CircleFrame(<span class="string">"碰撞的小球"</span>, sceneWidth, sceneHeight);</span><br><span class="line">    <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="comment">// 绘制数据</span></span><br><span class="line">            frame.render(circles);</span><br><span class="line">            CircleHelper.pause(<span class="number">20</span>);</span><br><span class="line">            <span class="comment">// 更新数据</span></span><br><span class="line">            <span class="keyword">for</span> (Circle circle : circles) &#123;</span><br><span class="line">                circle.move(<span class="number">0</span>, <span class="number">0</span>, sceneWidth, sceneHeight, circles);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;).start();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>再次运行程序：</p>
+<p><img src="碰撞的小球1.gif" style="zoom:67%;"></p>
+<p>成功解决~。</p>
+<h2 id="7、球与球之间的碰撞"><a href="#7、球与球之间的碰撞" class="headerlink" title="7、球与球之间的碰撞"></a>7、球与球之间的碰撞</h2><p>为完成小球之间的碰撞问题，我们需要了解小球碰撞后各自的运动轨迹和速度，这涉及到中学的物理知识，为进一步方便让我们便于理解，我们将模型化至最简，即不考虑摩擦力、小球本身的旋转方向、小球的质量（在本模型中<strong>所有的小球质量都相等</strong>）、能量无损失等因素。</p>
+<p>我们设小球1碰撞前的速度为$v_1$，小球2碰撞前的速度为$v_2$，根据动量守恒和动能守恒，可得方程组：</p>
+<p><img src="碰撞前.png" alt="碰撞前" style="zoom:80%;"></p>
+<script type="math/tex; mode=display">
+\begin{cases} 
+    v_1 + v_2 = v_1' + v_2'\\
+    v_1^2 + v_1^2 = v_1'^2 + v_2'^2 
+\end{cases}</script><p>解得：</p>
+<script type="math/tex; mode=display">
+\begin{cases} 
+    v_1' = v_2\\
+    v_2' = v_1
+\end{cases}</script><p>将两个小球碰撞后的速度 $v_1’$ 和  $v_2’$ 分解到小球对应速度的$x$和$y$方向上：</p>
+<p><img src="碰撞后.png" alt="碰撞后" style="zoom:80%;"></p>
+<script type="math/tex; mode=display">
+\begin{cases} 
+    v_{1x}' = v_{2x}\\
+    v_{2x}' = v_{1x}\\
+    v_{1y}' = v_{2y}\\
+    v_{2y}' = v_{1y}
+\end{cases}</script><p>对此，我们也就可以写出相应的代码了：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Circle</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="comment">// 球与球之间的碰撞</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">checkCircleCollision</span><span class="params">(Circle another)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 先把两个小球碰撞前的速度保存起来</span></span><br><span class="line">        <span class="keyword">int</span> vx_temp = vx;</span><br><span class="line">        <span class="keyword">int</span> vy_temp = vy;</span><br><span class="line">        <span class="keyword">int</span> vx_another_temp = another.vx;</span><br><span class="line">        <span class="keyword">int</span> vy_another_temp = another.vy;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 两小球球心的距离</span></span><br><span class="line">        <span class="keyword">int</span> d = (<span class="keyword">int</span>) Math.sqrt((x - another.x) * (x - another.x) + (y - another.y) * (y - another.y));</span><br><span class="line">        <span class="keyword">if</span> (d &lt;= <span class="number">2</span> * r) &#123;</span><br><span class="line">            vx = vx_another_temp;</span><br><span class="line">            another.vx = vx_temp;</span><br><span class="line">            vy = vy_another_temp;</span><br><span class="line">            another.vy = vy_temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>把这段代码放到move方法中进行调用：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 多传进来一个Circle数组，对每一个Circle进行小球之间的碰撞检测</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">move</span><span class="params">(<span class="keyword">int</span> minX, <span class="keyword">int</span> minY, <span class="keyword">int</span> maxX, <span class="keyword">int</span> maxY, Circle[] circles)</span> </span>&#123;</span><br><span class="line">    x += vx;</span><br><span class="line">    y += vy;</span><br><span class="line">    checkWallCollision(minX, minY, maxX, maxY);</span><br><span class="line">    <span class="keyword">for</span> (Circle circle : circles) &#123;</span><br><span class="line">        checkCircleCollision(circle);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>与此同时我们也得修改main方法中调用的move方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...保持不变</span></span><br><span class="line"><span class="comment">// 更新数据</span></span><br><span class="line"><span class="keyword">for</span> (Circle circle : circles) &#123;</span><br><span class="line">    circle.move(<span class="number">0</span>, <span class="number">0</span>, sceneWidth, sceneHeight, circles); <span class="comment">// 将初始化的Circle[]传进去</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ...保持不变</span></span><br></pre></td></tr></table></figure>
+<p>运行代码：</p>
+<p><img src="碰撞的小球2.gif" style="zoom:67%;"></p>
+<p>成功~~</p>
+<h2 id="8、解决小球初始生成位置的一点小BUG"><a href="#8、解决小球初始生成位置的一点小BUG" class="headerlink" title="8、解决小球初始生成位置的一点小BUG"></a>8、解决小球初始生成位置的一点小BUG</h2><p>在我们的程序中，我们的小球在初始生成的时候，会出现一点小BUG，看起来挺尴尬的：</p>
+<p><img src="生成位置的小BUG.png" alt></p>
+<p>解决方案：</p>
+<p>我们先来看我们生成小球初始位置的算法：</p>
+<p><img src="随机生成圆.png" style="zoom:75%;"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x = (<span class="keyword">int</span>) ((Math.random() * (sceneWidth - <span class="number">2</span> * R)) + R);</span><br><span class="line"><span class="keyword">int</span> y = (<span class="keyword">int</span>) ((Math.random() * (sceneHeight - <span class="number">2</span> * R)) + R);</span><br></pre></td></tr></table></figure>
+<p>这样子可能会导致两次生成的x，y靠的比较近，也就是会产生小球相交的情况。</p>
+<p>为避免这个现象，我们现在将整个画布分成 <em>棋盘格</em> 的形式</p>
+<p><img src="棋盘格.png" style="zoom:67%;"></p>
+<p>为每一个格子做一个标记，有小球置为true，没有则置为false。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">boolean</span>[][] isCircle = <span class="keyword">new</span> <span class="keyword">boolean</span>[sceneWidth/(<span class="number">2</span>*R)][sceneHeight/(<span class="number">2</span>*R)]; <span class="comment">// 初始都默认为false</span></span><br></pre></td></tr></table></figure>
+<p>现在在画布随机生成一个坐标(m,n)，用这个坐标除以单元格的长度，可以得到这个坐标位于第几个格子里，也就小球生成的格子所在。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> m = (<span class="keyword">int</span>) (Math.random() * sceneWidth) / (<span class="number">2</span> * R);</span><br><span class="line"><span class="keyword">int</span> n = (<span class="keyword">int</span>) (Math.random() * sceneHeight) / (<span class="number">2</span> * R);</span><br></pre></td></tr></table></figure>
+<p>对(m,n)这个格子进行判断，如果有则重新生成新的随机坐标，没有则把小球放在这个格子，<code>isCircle[m][n]</code>置为true，并计算小球的圆心坐标也就是格子正中心的位置。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = m * (R + R) + R;</span><br><span class="line">y = n * (R + R) + R;</span><br><span class="line">isCircle[m][n] = <span class="keyword">true</span>;</span><br></pre></td></tr></table></figure>
+<p>整体代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">        <span class="keyword">boolean</span>[][] isCircle = <span class="keyword">new</span> <span class="keyword">boolean</span>[sceneWidth/(<span class="number">2</span>*R)][sceneHeight/(<span class="number">2</span>*R)];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> x = -<span class="number">1</span>, y = -<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">int</span> m = (<span class="keyword">int</span>) (Math.random() * sceneWidth) / (<span class="number">2</span> * R);</span><br><span class="line">            <span class="keyword">int</span> n = (<span class="keyword">int</span>) (Math.random() * sceneHeight) / (<span class="number">2</span> * R);</span><br><span class="line">            <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (isCircle[m][n]) &#123; <span class="comment">// 如果当前格子已经有小球了，继续循环，重新随机生成一个位置</span></span><br><span class="line">                    m = (<span class="keyword">int</span>) (Math.random() * sceneWidth) / (<span class="number">2</span> * R);</span><br><span class="line">                    n = (<span class="keyword">int</span>) (Math.random() * sceneHeight) / (<span class="number">2</span> * R);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123; <span class="comment">// 如果当前格子里什么都没有，在此处生成一个小球并跳出循环</span></span><br><span class="line">                    x = m * (R + R) + R;</span><br><span class="line">                    y = n * (R + R) + R;</span><br><span class="line">                    isCircle[m][n] = <span class="keyword">true</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">int</span> vx = (<span class="keyword">int</span>) (Math.random() * <span class="number">11</span>) - <span class="number">5</span>;</span><br><span class="line">            <span class="keyword">int</span> vy = (<span class="keyword">int</span>) (Math.random() * <span class="number">11</span>) - <span class="number">5</span>;</span><br><span class="line">            circles[i] = <span class="keyword">new</span> Circle(x, y, R, vx, vy);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样，两个小球在最开始生成的时候就不会出现重叠的情况了。</p>
+<h2 id="9、MVC结构设计"><a href="#9、MVC结构设计" class="headerlink" title="9、MVC结构设计"></a>9、MVC结构设计</h2><p>在上面的例子中，我们的main方法要处理的逻辑实在有点多，看起来很乱，层次结构不是很清晰。因此我们把main方法中的逻辑都抽取出来，放进一个单独的类里面。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CircleVisualizer</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> CircleFrame frame;</span><br><span class="line">    <span class="comment">// 设置数据</span></span><br><span class="line">    <span class="keyword">private</span> Circle[] circles;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CircleVisualizer</span><span class="params">(<span class="keyword">int</span> sceneWidth, <span class="keyword">int</span> sceneHeight, <span class="keyword">int</span> N)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 初始化数据</span></span><br><span class="line">        circles = <span class="keyword">new</span> Circle[N];</span><br><span class="line">        <span class="keyword">int</span> R = <span class="number">50</span>;</span><br><span class="line">        <span class="keyword">boolean</span>[][] isCircle = <span class="keyword">new</span> <span class="keyword">boolean</span>[sceneWidth/(<span class="number">2</span>*R)][sceneHeight/(<span class="number">2</span>*R)];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> x = -<span class="number">1</span>, y = -<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">int</span> m = (<span class="keyword">int</span>) (Math.random() * sceneWidth) / (<span class="number">2</span> * R);</span><br><span class="line">            <span class="keyword">int</span> n = (<span class="keyword">int</span>) (Math.random() * sceneHeight) / (<span class="number">2</span> * R);</span><br><span class="line">            <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (isCircle[m][n]) &#123; <span class="comment">// 如果当前格子已经有小球了，继续循环，重新随机生成一个位置</span></span><br><span class="line">                    m = (<span class="keyword">int</span>) (Math.random() * sceneWidth) / (<span class="number">2</span> * R);</span><br><span class="line">                    n = (<span class="keyword">int</span>) (Math.random() * sceneHeight) / (<span class="number">2</span> * R);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123; <span class="comment">// 如果当前格子里什么都没有，在此处生成一个小球并跳出循环</span></span><br><span class="line">                    x = m * (R + R) + R;</span><br><span class="line">                    y = n * (R + R) + R;</span><br><span class="line">                    isCircle[m][n] = <span class="keyword">true</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">int</span> vx = (<span class="keyword">int</span>) (Math.random() * <span class="number">11</span>) - <span class="number">5</span>;</span><br><span class="line">            <span class="keyword">int</span> vy = (<span class="keyword">int</span>) (Math.random() * <span class="number">11</span>) - <span class="number">5</span>;</span><br><span class="line">            circles[i] = <span class="keyword">new</span> Circle(x, y, R, vx, vy);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 初始化视图</span></span><br><span class="line">        EventQueue.invokeLater(() -&gt; &#123;</span><br><span class="line">            frame = <span class="keyword">new</span> CircleFrame(<span class="string">"碰撞的小球"</span>, sceneWidth, sceneHeight);</span><br><span class="line">            <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">                run();</span><br><span class="line">            &#125;).start();</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="comment">// 绘制数据</span></span><br><span class="line">            frame.render(circles);</span><br><span class="line">            CircleHelper.pause(<span class="number">20</span>);</span><br><span class="line">            <span class="comment">// 更新数据</span></span><br><span class="line">            <span class="keyword">for</span> (Circle circle : circles) &#123;</span><br><span class="line">                circle.move(<span class="number">0</span>, <span class="number">0</span>, frame.getCanvasWidth(), frame.getCanvasHeight(), circles);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样我们在main方法中只要声明宽高，小球数量，在实例化CircleVisualizer类就可以了。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> sceneWidth = <span class="number">800</span>;</span><br><span class="line">        <span class="keyword">int</span> sceneHeight = <span class="number">800</span>;</span><br><span class="line">        <span class="keyword">int</span> N = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">new</span> CircleVisualizer(sceneWidth, sceneHeight, N);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在本案例中：</p>
+<p>CircleVisualizer类负责处理数据的变化，充当了MVC中的<strong>Controller层</strong></p>
+<p>CircleFrame类负责绘制图像，将图像呈现给用户，充当了MVC中的<strong>View层</strong></p>
+<p>Circle类（实际上应该是Circle[]）就是MVC中的<strong>Model层</strong></p>
+<p>将程序分为以上三层，不仅让代码结构变得清晰，而且可以让我们后续的算法可视化程序中套用该模板。</p>
+<h2 id="10、添加交互事件"><a href="#10、添加交互事件" class="headerlink" title="10、添加交互事件"></a>10、添加交互事件</h2><p>在本案例中我们还是采用<strong>内部私有类</strong>的方式来实现键盘和鼠标的交互事件。</p>
+<h3 id="添加键盘事件"><a href="#添加键盘事件" class="headerlink" title="添加键盘事件"></a>添加键盘事件</h3><p>添加键盘事件的方式有两种：</p>
+<p>一是实现KeyListener接口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CircleVisualizer</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">CircleKeyListener</span> <span class="keyword">implements</span> <span class="title">KeyListener</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">keyTyped</span><span class="params">(KeyEvent e)</span> </span>&#123; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">keyPressed</span><span class="params">(KeyEvent e)</span> </span>&#123; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">keyReleased</span><span class="params">(KeyEvent e)</span> </span>&#123; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>二是继承KeyAdapter类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CircleVisualizer</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">CircleKeyListener</span> <span class="keyword">extends</span> <span class="title">KeyAdapter</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">keyReleased</span><span class="params">(KeyEvent e)</span> </span>&#123; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>实现接口就必须要重写该接口定义的所有方法，而我们只需要重写keyReleased这个方法，因此选择继承KeyAdapter类来实现键盘交互事件。</p>
+<p>在本案例中，我们按下键盘的空格键让所有运动的小球都变得停止，再次按下让小球继续运动。代码实现如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CircleVisualizer</span> </span>&#123;</span><br><span class="line">	<span class="comment">// ...</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CircleVisualizer</span><span class="params">(<span class="keyword">int</span> sceneWidth, <span class="keyword">int</span> sceneHeight, <span class="keyword">int</span> N)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 初始化数据</span></span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">        <span class="comment">// 初始化视图</span></span><br><span class="line">        EventQueue.invokeLater(() -&gt; &#123;</span><br><span class="line">            frame = <span class="keyword">new</span> CircleFrame(<span class="string">"碰撞的小球"</span>, sceneWidth, sceneHeight);</span><br><span class="line">            <span class="comment">// 小球在窗体中的运动/静止状态都是frame进行绘制的，因此键盘事件要添加给frame</span></span><br><span class="line">            frame.addKeyListener(<span class="keyword">new</span> CircleKeyListener()); <span class="comment">// 将键盘事件添加给frame</span></span><br><span class="line">            <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">                run();</span><br><span class="line">            &#125;).start();</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="comment">// 绘制数据</span></span><br><span class="line">            <span class="comment">// ...</span></span><br><span class="line">            <span class="comment">// 更新数据</span></span><br><span class="line">            <span class="keyword">if</span> (isAnimated) &#123; <span class="comment">// 根据小球运动状态来绘制</span></span><br><span class="line">                <span class="keyword">for</span> (Circle circle : circles) &#123;</span><br><span class="line">                    circle.move(<span class="number">0</span>, <span class="number">0</span>, frame.getCanvasWidth(), frame.getCanvasHeight(), circles);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> isAnimated = <span class="keyword">true</span>; <span class="comment">// 小球是否在运动，默认是在运动</span></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">CircleKeyListener</span> <span class="keyword">extends</span> <span class="title">KeyAdapter</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">keyReleased</span><span class="params">(KeyEvent e)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (e.getKeyChar() == <span class="string">' '</span>) &#123; <span class="comment">// 如果按的是空格键</span></span><br><span class="line">                isAnimated = !isAnimated; <span class="comment">// 改变小球的运动状态</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="添加鼠标事件"><a href="#添加鼠标事件" class="headerlink" title="添加鼠标事件"></a>添加鼠标事件</h3><p>添加鼠标事件和键盘事件一样，我们选择<strong>内部私有类</strong>继承MouseAdapter类。</p>
+<h4 id="在窗体中，我们点击一个小球改变其颜色，再次点击还原其颜色"><a href="#在窗体中，我们点击一个小球改变其颜色，再次点击还原其颜色" class="headerlink" title="在窗体中，我们点击一个小球改变其颜色，再次点击还原其颜色"></a>在窗体中，我们点击一个小球改变其颜色，再次点击还原其颜色</h4><h5 id="1、-获取鼠标点击的位置"><a href="#1、-获取鼠标点击的位置" class="headerlink" title="1、 获取鼠标点击的位置"></a>1、 获取鼠标点击的位置</h5><p><code>System.out.println(e.getPoint()); // 获得鼠标点击位置</code></p>
+<p>由于窗体标题栏和边框的干扰，我们用<code>e.getPoint()</code>获取到的坐标往往不是我们想要的坐标，因此要进行微调，用<code>e.translatePoint(int x,int y)</code>方法进行调整，具体调整的数值要根据自己的情况来调整。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">CircleMouseListener</span> <span class="keyword">extends</span> <span class="title">MouseAdapter</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">mousePressed</span><span class="params">(MouseEvent e)</span> </span>&#123;</span><br><span class="line">        e.translatePoint(-<span class="number">3</span>, -(frame.getBounds().height-frame.getCanvasHeight())+<span class="number">13</span>);</span><br><span class="line"><span class="comment">//            System.out.println(e.getPoint()); // 获得鼠标点击位置</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="2、判断鼠标点击的位置是否在一个小球内"><a href="#2、判断鼠标点击的位置是否在一个小球内" class="headerlink" title="2、判断鼠标点击的位置是否在一个小球内"></a>2、判断鼠标点击的位置是否在一个小球内</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Circle</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">boolean</span> isFilled = <span class="keyword">false</span>; <span class="comment">// 初始为空心圆</span></span><br><span class="line">    <span class="comment">// y用两点间的距离公式进行判断</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">contain</span><span class="params">(Point p)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (x - p.x) * (x - p.x) + (y - p.y) * (y - p.y) &lt;= r * r;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">mousePressed</span><span class="params">(MouseEvent e)</span> </span>&#123;</span><br><span class="line">    e.translatePoint(-<span class="number">3</span>, -(frame.getBounds().height-frame.getCanvasHeight())+<span class="number">13</span>);</span><br><span class="line"><span class="comment">//            System.out.println(e.getPoint()); // 获得鼠标点击位置</span></span><br><span class="line">    <span class="keyword">for</span> (Circle circle : circles) &#123; <span class="comment">// 对每一个小球进行判断</span></span><br><span class="line">        <span class="keyword">if</span> (circle.contain(e.getPoint())) &#123; <span class="comment">// 如果有小球包含该点</span></span><br><span class="line">            circle.isFilled = !circle.isFilled; <span class="comment">// 改变小球的颜色状态</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="3、修改CircleFrame里面的绘制小球代码部分"><a href="#3、修改CircleFrame里面的绘制小球代码部分" class="headerlink" title="3、修改CircleFrame里面的绘制小球代码部分"></a>3、修改CircleFrame里面的绘制小球代码部分</h5><p>根据小球的<code>isFilled</code>属性进行绘制</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CircleFrame</span> <span class="keyword">extends</span> <span class="title">JFrame</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">CircleCanvas</span> <span class="keyword">extends</span> <span class="title">JPanel</span> </span>&#123;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">paintComponent</span><span class="params">(Graphics g)</span> </span>&#123;</span><br><span class="line">            <span class="comment">// ...</span></span><br><span class="line">            <span class="comment">// 具体绘制</span></span><br><span class="line">            CircleHelper.setStrokeWidth(g2d, <span class="number">1</span>);</span><br><span class="line">            CircleHelper.setColor(g2d, Color.RED);</span><br><span class="line">            <span class="keyword">for</span> (Circle circle : circles) &#123;</span><br><span class="line">                <span class="keyword">if</span> (!circle.isFilled)</span><br><span class="line">                    CircleHelper.drawCircle(g2d, circle.x, circle.y, circle.getR()); <span class="comment">// 绘制空心圆</span></span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    CircleHelper.fillCircle(g2d, circle.x, circle.y, circle.getR()); <span class="comment">// 绘制实心圆</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="4、运行结果"><a href="#4、运行结果" class="headerlink" title="4、运行结果"></a>4、运行结果</h5><p><img src="键盘鼠标事件.gif" style="zoom:50%;"></p>
+<h2 id="11、抽取MVC模板"><a href="#11、抽取MVC模板" class="headerlink" title="11、抽取MVC模板"></a>11、抽取MVC模板</h2><h3 id="View层：ObjectFrame-java"><a href="#View层：ObjectFrame-java" class="headerlink" title="View层：ObjectFrame.java"></a>View层：<code>ObjectFrame.java</code></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ObjectFrame</span> <span class="keyword">extends</span> <span class="title">JFrame</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> canvasWidth;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> canvasHeight;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ObjectFrame</span><span class="params">(String title, <span class="keyword">int</span> canvasWidth, <span class="keyword">int</span> canvasHeight)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">super</span>(title);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">this</span>.canvasWidth = canvasWidth;</span><br><span class="line">        <span class="keyword">this</span>.canvasHeight = canvasHeight;</span><br><span class="line"></span><br><span class="line">        ObjectCanvas canvas = <span class="keyword">new</span> ObjectCanvas();</span><br><span class="line">        <span class="keyword">this</span>.setContentPane(canvas);</span><br><span class="line">        <span class="keyword">this</span>.pack();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">this</span>.setResizable(<span class="keyword">false</span>);</span><br><span class="line">        <span class="keyword">this</span>.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">this</span>.setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ObjectFrame</span><span class="params">(String title)</span> </span>&#123; <span class="keyword">this</span>(title, <span class="number">1024</span>, <span class="number">768</span>); &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getCanvasWidth</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> canvasWidth; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getCanvasHeight</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> canvasHeight; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 对传递进来的数据进行渲染</span></span><br><span class="line">    <span class="keyword">private</span> Object object;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">render</span><span class="params">(Object object)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.object = object;</span><br><span class="line">        <span class="keyword">this</span>.repaint();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">ObjectCanvas</span> <span class="keyword">extends</span> <span class="title">JPanel</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">ObjectCanvas</span><span class="params">()</span> </span>&#123; <span class="keyword">super</span>(<span class="keyword">true</span>); &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">paintComponent</span><span class="params">(Graphics g)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">super</span>.paintComponent(g);</span><br><span class="line"></span><br><span class="line">            Graphics2D g2d = (Graphics2D) g;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 抗锯齿</span></span><br><span class="line">            RenderingHints hints = <span class="keyword">new</span> RenderingHints(</span><br><span class="line">                    RenderingHints.KEY_ANTIALIASING,</span><br><span class="line">                    RenderingHints.VALUE_ANTIALIAS_ON);</span><br><span class="line">            g2d.addRenderingHints(hints);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 具体绘制</span></span><br><span class="line">            <span class="comment">// TODO</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> Dimension <span class="title">getPreferredSize</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> <span class="keyword">new</span> Dimension(canvasWidth, canvasHeight); &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Controller层：ObjectVisualizer-java"><a href="#Controller层：ObjectVisualizer-java" class="headerlink" title="Controller层：ObjectVisualizer.java"></a>Controller层：<code>ObjectVisualizer.java</code></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ObjectVisualizer</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 设置数据</span></span><br><span class="line">    <span class="keyword">private</span> Object object;</span><br><span class="line">    <span class="keyword">private</span> ObjectFrame frame;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ObjectVisualizer</span><span class="params">(<span class="keyword">int</span> sceneWidth, <span class="keyword">int</span> sceneHeight, <span class="keyword">int</span> N)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 初始化数据</span></span><br><span class="line">        <span class="comment">// 对object进行初始化</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 初始化视图</span></span><br><span class="line">        EventQueue.invokeLater(() -&gt; &#123;</span><br><span class="line">            frame = <span class="keyword">new</span> ObjectFrame(<span class="string">"title"</span>, sceneWidth, sceneHeight);</span><br><span class="line">            <span class="comment">// 根据具体情况添加键盘鼠标事件</span></span><br><span class="line">            <span class="comment">// frame.addKeyListener(new ObjectKeyListener()); // 添加键盘事件</span></span><br><span class="line">            <span class="comment">// frame.addMouseListener(new ObjectMouseListener()); // 添加鼠标事件</span></span><br><span class="line">            <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">                run();</span><br><span class="line">            &#125;).start();</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="comment">// 绘制数据</span></span><br><span class="line">            frame.render(object);</span><br><span class="line">            CircleHelper.pause(<span class="number">20</span>);</span><br><span class="line">            <span class="comment">// 更新数据</span></span><br><span class="line">            <span class="comment">// ...</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">ObjectKeyListener</span> <span class="keyword">extends</span> <span class="title">KeyAdapter</span> </span>&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">keyReleased</span><span class="params">(KeyEvent e)</span> </span>&#123; &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">ObjectMouseListener</span> <span class="keyword">extends</span> <span class="title">MouseAdapter</span> </span>&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">mousePressed</span><span class="params">(MouseEvent e)</span> </span>&#123; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Model层：Object-java"><a href="#Model层：Object-java" class="headerlink" title="Model层：Object.java"></a>Model层：<code>Object.java</code></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Object</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 设置object的属性等...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="辅助工具类：ObjectHelper-java"><a href="#辅助工具类：ObjectHelper-java" class="headerlink" title="辅助工具类：ObjectHelper.java"></a>辅助工具类：<code>ObjectHelper.java</code></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ObjectHelper</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">ObjectHelper</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Red = <span class="keyword">new</span> Color(<span class="number">0xF44336</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Pink = <span class="keyword">new</span> Color(<span class="number">0xE91E63</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Purple = <span class="keyword">new</span> Color(<span class="number">0x9C27B0</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color DeepPurple = <span class="keyword">new</span> Color(<span class="number">0x673AB7</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Indigo = <span class="keyword">new</span> Color(<span class="number">0x3F51B5</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Blue = <span class="keyword">new</span> Color(<span class="number">0x2196F3</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color LightBlue = <span class="keyword">new</span> Color(<span class="number">0x03A9F4</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Cyan = <span class="keyword">new</span> Color(<span class="number">0x00BCD4</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Teal = <span class="keyword">new</span> Color(<span class="number">0x009688</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Green = <span class="keyword">new</span> Color(<span class="number">0x4CAF50</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color LightGreen = <span class="keyword">new</span> Color(<span class="number">0x8BC34A</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Lime = <span class="keyword">new</span> Color(<span class="number">0xCDDC39</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Yellow = <span class="keyword">new</span> Color(<span class="number">0xFFEB3B</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Amber = <span class="keyword">new</span> Color(<span class="number">0xFFC107</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Orange = <span class="keyword">new</span> Color(<span class="number">0xFF9800</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color DeepOrange = <span class="keyword">new</span> Color(<span class="number">0xFF5722</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Brown = <span class="keyword">new</span> Color(<span class="number">0x795548</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Grey = <span class="keyword">new</span> Color(<span class="number">0x9E9E9E</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color BlueGrey = <span class="keyword">new</span> Color(<span class="number">0x607D8B</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color Black = <span class="keyword">new</span> Color(<span class="number">0x000000</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Color White = <span class="keyword">new</span> Color(<span class="number">0xFFFFFF</span>);</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">setStrokeWidth</span><span class="params">(Graphics2D g2d, <span class="keyword">int</span> width)</span> </span>&#123;</span><br><span class="line">        g2d.setStroke(<span class="keyword">new</span> BasicStroke(width, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">setColor</span><span class="params">(Graphics2D g2d, Color color)</span> </span>&#123;</span><br><span class="line">        g2d.setColor(color);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">drawCircle</span><span class="params">(Graphics2D g2d, <span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">        Ellipse2D circle = <span class="keyword">new</span> Ellipse2D.Double(x-r, y-r, <span class="number">2</span>*r, <span class="number">2</span>*r);</span><br><span class="line">        g2d.draw(circle);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">fillCircle</span><span class="params">(Graphics2D g2d, <span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">        Ellipse2D circle = <span class="keyword">new</span> Ellipse2D.Double(x-r, y-r, <span class="number">2</span>*r, <span class="number">2</span>*r);</span><br><span class="line">        g2d.fill(circle);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">drawRectangle</span><span class="params">(Graphics2D g2d, <span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> w, <span class="keyword">int</span> h)</span> </span>&#123;</span><br><span class="line">        Rectangle2D rectangle = <span class="keyword">new</span> Rectangle2D.Double(x, y, w, h);</span><br><span class="line">        g2d.draw(rectangle);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">fillRectangle</span><span class="params">(Graphics2D g2d, <span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> w, <span class="keyword">int</span> h)</span> </span>&#123;</span><br><span class="line">        Rectangle2D rectangle = <span class="keyword">new</span> Rectangle2D.Double(x, y, w, h);</span><br><span class="line">        g2d.fill(rectangle);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">drawText</span><span class="params">(Graphics2D g, String text, <span class="keyword">int</span> centerX, <span class="keyword">int</span> centerY)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(text == <span class="keyword">null</span>)</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"Text is null in drawText function!"</span>);</span><br><span class="line"></span><br><span class="line">        FontMetrics metrics = g.getFontMetrics();</span><br><span class="line">        <span class="keyword">int</span> w = metrics.stringWidth(text);</span><br><span class="line">        <span class="keyword">int</span> h = metrics.getDescent();</span><br><span class="line">        g.drawString(text, centerX - w/<span class="number">2</span>, centerY + h);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">pause</span><span class="params">(<span class="keyword">int</span> t)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Thread.sleep(<span class="number">20</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>模板记得单独保存一下，后面的程序都会套用该模板。</strong></p>
+<h2 id="12、第一章结束，下一章再见：）"><a href="#12、第一章结束，下一章再见：）" class="headerlink" title="12、第一章结束，下一章再见：）"></a>12、第一章结束，下一章再见：）</h2><p>至此，我们用Java Swing模拟一个小球碰撞的场景就算完成了。</p>
+<p>不过我们的程序依旧存在着bug，比如，让程序运行一会，还是有可能会在小球碰撞过程中出现相交的情况。<img src="相交的小球.png" style="zoom:50%;"></p>
+<p>一是由于采用<code>int</code>型来获取两小球之间的距离，产生了精度丢失</p>
+<p><code>int d = (int) Math.sqrt((x - another.x) * (x - another.x) + (y - another.y) * (y - another.y));</code></p>
+<p>二是由于计算机绘制的速度过快，导致小球在还未进行碰撞检测前就已经交织在一起了。</p>
+<p>有兴趣的同学不妨自己去思考怎么解决这个问题，希望大家多多加油！！</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+      </div>
+    
+  
+    <!--
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/打扰了.jpg" alt="韩锦峰 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>这个博主很懒，还没有自己的公众号</div>
+</div>
+
+      </div>
+    -->
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>觉得好的话，请为作者点个赞</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="韩锦峰 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="韩锦峰 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"><i class="fa fa-tag"></i> java</a>
+          
+            <a href="/tags/算法/" rel="tag"><i class="fa fa-tag"></i> 算法</a>
+          
+            <a href="/tags/java-swing/" rel="tag"><i class="fa fa-tag"></i> java swing</a>
+          
+            <a href="/tags/可视化/" rel="tag"><i class="fa fa-tag"></i> 可视化</a>
+          
+            <a href="/tags/图形学/" rel="tag"><i class="fa fa-tag"></i> 图形学</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/29/SpringBoot入门/" rel="prev" title="Spring boot入门">
+                Spring boot入门 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80Njg2MC8yMzM2MQ=="></div>
+    </div>
+  
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/0309.jpg" alt="韩锦峰">
+            
+              <p class="site-author-name" itemprop="name">韩锦峰</p>
+              <p class="site-description motion-element" itemprop="description">不积硅步，无以至千里</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/Riven0309" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://blog.csdn.net/qq_37248200" target="_blank" title="CSDN">
+                    
+                      <i class="fa fa-fw fa-moon-o"></i>CSDN</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://weibo.com/7311637115/profile?topnav=1&wvr=6" target="_blank" title="微博">
+                    
+                      <i class="fa fa-fw fa-weibo"></i>微博</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.zhihu.com/people/cai-niao-zhong-de-gao-shou-17/activities" target="_blank" title="知乎">
+                    
+                      <i class="fa fa-fw fa-book"></i>知乎</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.imooc.com/" title="慕课网" target="_blank">慕课网</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.bilibili.com/" title="bilibili" target="_blank">bilibili</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#看得见的算法"><span class="nav-text">看得见的算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章、碰撞的小球"><span class="nav-text">第一章、碰撞的小球</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1、-创建一个JFrame窗体"><span class="nav-text">1、 创建一个JFrame窗体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、为JFrame添加JPanel画布"><span class="nav-text">2、为JFrame添加JPanel画布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、使用Graphics2D进行绘图"><span class="nav-text">3、使用Graphics2D进行绘图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、整理绘制工具类CircleHelper-java"><span class="nav-text">4、整理绘制工具类CircleHelper.java</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、抗锯齿和双缓存"><span class="nav-text">5、抗锯齿和双缓存</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#抗锯齿"><span class="nav-text">抗锯齿</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#双缓存"><span class="nav-text">双缓存</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#单缓存"><span class="nav-text">单缓存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#双缓存技术"><span class="nav-text">双缓存技术</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、动画基础：绘制运动的小球"><span class="nav-text">6、动画基础：绘制运动的小球</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6、1-首先需要建立小球数据"><span class="nav-text">6、1  首先需要建立小球数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、2-将Circle的数据传递给CircleFrame，使窗体能够对小球的数据进行绘制。"><span class="nav-text">6、2 将Circle的数据传递给CircleFrame，使窗体能够对小球的数据进行绘制。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、3-在启动类中进行Circle数据和窗体大小的初始化，在事件队列中进行对窗体的渲染和数据更新。"><span class="nav-text">6、3 在启动类中进行Circle数据和窗体大小的初始化，在事件队列中进行对窗体的渲染和数据更新。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、4-启动程序后发现的错误及解决方法"><span class="nav-text">6、4 启动程序后发现的错误及解决方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、球与球之间的碰撞"><span class="nav-text">7、球与球之间的碰撞</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8、解决小球初始生成位置的一点小BUG"><span class="nav-text">8、解决小球初始生成位置的一点小BUG</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9、MVC结构设计"><span class="nav-text">9、MVC结构设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10、添加交互事件"><span class="nav-text">10、添加交互事件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加键盘事件"><span class="nav-text">添加键盘事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加鼠标事件"><span class="nav-text">添加鼠标事件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#在窗体中，我们点击一个小球改变其颜色，再次点击还原其颜色"><span class="nav-text">在窗体中，我们点击一个小球改变其颜色，再次点击还原其颜色</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1、-获取鼠标点击的位置"><span class="nav-text">1、 获取鼠标点击的位置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2、判断鼠标点击的位置是否在一个小球内"><span class="nav-text">2、判断鼠标点击的位置是否在一个小球内</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3、修改CircleFrame里面的绘制小球代码部分"><span class="nav-text">3、修改CircleFrame里面的绘制小球代码部分</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4、运行结果"><span class="nav-text">4、运行结果</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11、抽取MVC模板"><span class="nav-text">11、抽取MVC模板</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#View层：ObjectFrame-java"><span class="nav-text">View层：ObjectFrame.java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Controller层：ObjectVisualizer-java"><span class="nav-text">Controller层：ObjectVisualizer.java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Model层：Object-java"><span class="nav-text">Model层：Object.java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#辅助工具类：ObjectHelper-java"><span class="nav-text">辅助工具类：ObjectHelper.java</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12、第一章结束，下一章再见：）"><span class="nav-text">12、第一章结束，下一章再见：）</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+    <div style>
+  <canvas id="canvas" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+</div>
+<script>
+!function(){function t(t){var r=[];a.fillStyle="#005eac";var h=new Date,u=70,s=30,v=h.getHours(),g=Math.floor(v/10),m=v%10;r.push({num:g}),r.push({num:m}),r.push({num:10});var c=h.getMinutes(),g=Math.floor(c/10),m=c%10;r.push({num:g}),r.push({num:m}),r.push({num:10});var M=h.getSeconds(),g=Math.floor(M/10),m=M%10;r.push({num:g}),r.push({num:m});for(var p=0;p<r.length;p++)r[p].offsetX=u,u=f(u,s,r[p].num,t),p<r.length-1&&10!=r[p].num&&10!=r[p+1].num&&(u+=l);if(0==i.length)i=r;else for(var C=0;C<i.length;C++)i[C].num!=r[C].num&&(n(r[C]),i[C].num=r[C].num);return e(t),o(),h}function n(t){for(var n=t.num,e=m[n],o=0;o<e.length;o++)for(var f=0;f<e[o].length;f++)if(1==e[o][f]){var a={offsetX:t.offsetX+u+2*u*f,offsetY:30+u+2*u*o,color:g[Math.floor(Math.random()*g.length)],g:1.5+Math.random(),vx:4*Math.pow(-1,Math.ceil(10*Math.random()))+Math.random(),vy:-5};v.push(a)}}function e(t){for(var n=0;n<v.length;n++)t.beginPath(),t.fillStyle=v[n].color,t.arc(v[n].offsetX,v[n].offsetY,u,0,2*Math.PI),t.fill()}function o(){for(var t=0,n=0;n<v.length;n++){var e=v[n];e.offsetX+=e.vx,e.offsetY+=e.vy,e.vy+=e.g,e.offsetY>h-u&&(e.offsetY=h-u,e.vy=-e.vy*s),e.offsetX>u&&e.offsetX<r-u&&(v[t]=v[n],t++)}for(;t<v.length;t++)v.pop()}function f(t,n,e,o){for(var f=m[e],a=0;a<f.length;a++)for(var r=0;r<f[a].length;r++)1==f[a][r]&&(o.beginPath(),o.arc(t+u+2*u*r,n+u+2*u*a,u,0,2*Math.PI),o.fill());return o.beginPath(),t+=f[0].length*u*2}var a,r=820,h=250,u=7,l=10,s=.65,v=[];const g=["#33B5E5","#0099CC","#AA66CC","#9933CC","#99CC00","#669900","#FFBB33","#FF8800","#FF4444","#CC0000"];var i=[],m=[[[0,0,1,1,1,0,0],[0,1,1,0,1,1,0],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[0,1,1,0,1,1,0],[0,0,1,1,1,0,0]],[[0,0,0,1,1,0,0],[0,1,1,1,1,0,0],[0,0,0,1,1,0,0],[0,0,0,1,1,0,0],[0,0,0,1,1,0,0],[0,0,0,1,1,0,0],[0,0,0,1,1,0,0],[0,0,0,1,1,0,0],[0,0,0,1,1,0,0],[1,1,1,1,1,1,1]],[[0,1,1,1,1,1,0],[1,1,0,0,0,1,1],[0,0,0,0,0,1,1],[0,0,0,0,1,1,0],[0,0,0,1,1,0,0],[0,0,1,1,0,0,0],[0,1,1,0,0,0,0],[1,1,0,0,0,0,0],[1,1,0,0,0,1,1],[1,1,1,1,1,1,1]],[[1,1,1,1,1,1,1],[0,0,0,0,0,1,1],[0,0,0,0,1,1,0],[0,0,0,1,1,0,0],[0,0,1,1,1,0,0],[0,0,0,0,1,1,0],[0,0,0,0,0,1,1],[0,0,0,0,0,1,1],[1,1,0,0,0,1,1],[0,1,1,1,1,1,0]],[[0,0,0,0,1,1,0],[0,0,0,1,1,1,0],[0,0,1,1,1,1,0],[0,1,1,0,1,1,0],[1,1,0,0,1,1,0],[1,1,1,1,1,1,1],[0,0,0,0,1,1,0],[0,0,0,0,1,1,0],[0,0,0,0,1,1,0],[0,0,0,1,1,1,1]],[[1,1,1,1,1,1,1],[1,1,0,0,0,0,0],[1,1,0,0,0,0,0],[1,1,1,1,1,1,0],[0,0,0,0,0,1,1],[0,0,0,0,0,1,1],[0,0,0,0,0,1,1],[0,0,0,0,0,1,1],[1,1,0,0,0,1,1],[0,1,1,1,1,1,0]],[[0,0,0,0,1,1,0],[0,0,1,1,0,0,0],[0,1,1,0,0,0,0],[1,1,0,0,0,0,0],[1,1,0,1,1,1,0],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[0,1,1,1,1,1,0]],[[1,1,1,1,1,1,1],[1,1,0,0,0,1,1],[0,0,0,0,1,1,0],[0,0,0,0,1,1,0],[0,0,0,1,1,0,0],[0,0,0,1,1,0,0],[0,0,1,1,0,0,0],[0,0,1,1,0,0,0],[0,0,1,1,0,0,0],[0,0,1,1,0,0,0]],[[0,1,1,1,1,1,0],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[0,1,1,1,1,1,0],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[0,1,1,1,1,1,0]],[[0,1,1,1,1,1,0],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[0,1,1,1,0,1,1],[0,0,0,0,0,1,1],[0,0,0,0,0,1,1],[0,0,0,0,1,1,0],[0,0,0,1,1,0,0],[0,1,1,0,0,0,0]],[[0,0,0,0],[0,0,0,0],[0,1,1,0],[0,1,1,0],[0,0,0,0],[0,0,0,0],[0,1,1,0],[0,1,1,0],[0,0,0,0],[0,0,0,0]]],c=document.getElementById("canvas");c.width=r,c.height=h,a=c.getContext("2d");new Date;setInterval(function(){a.clearRect(0,0,a.canvas.width,a.canvas.height),t(a)},50)}();
+</script>
+    <div id="days"></div>
+
+<script language="javascript">
+function show_date_time(){window.setTimeout("show_date_time()",1e3),BirthDay=new Date("09/26/2019 12:00:00"),today=new Date,timeold=today.getTime()-BirthDay.getTime(),sectimeold=timeold/1e3,secondsold=Math.floor(sectimeold),msPerDay=864e5,e_daysold=timeold/msPerDay,daysold=Math.floor(e_daysold),e_hrsold=24*(e_daysold-daysold),hrsold=setzero(Math.floor(e_hrsold)),e_minsold=60*(e_hrsold-hrsold),minsold=setzero(Math.floor(60*(e_hrsold-hrsold))),seconds=setzero(Math.floor(60*(e_minsold-minsold))),document.getElementById("days").innerHTML="已建立"+daysold+"天"+hrsold+"时"+minsold+"分"+seconds+"秒"}function setzero(e){return 10>e&&(e="0"+e),e}show_date_time();var dayFontStyle=document.getElementById("days");dayFontStyle.style.color="RGB(17,182,159)";dayFontStyle.style.fontSize="12px";
+</script>
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">韩锦峰</span>
+
+  
+</div>
+
+<!--
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.3</div>
+-->
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访客数 <i class="fa fa-user">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </i></span>
+  
+
+  
+    <span class="site-pv">
+      本站总访问量 <i class="fa fa-eye">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </i></span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  <script type="text/javascript" src="/js/src/click.js"></script>
+  <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+  <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/live2d-widget-model-z16/assets/z16.model.json"},"display":{"position":"left","width":200,"height":350},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+</html>
